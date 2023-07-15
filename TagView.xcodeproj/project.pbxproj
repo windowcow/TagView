@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		88231E762A625A3E00BA3B71 /* TagViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88231E752A625A3E00BA3B71 /* TagViewApp.swift */; };
-		88231E782A625A3E00BA3B71 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88231E772A625A3E00BA3B71 /* Item.swift */; };
 		88231E7A2A625A3E00BA3B71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88231E792A625A3E00BA3B71 /* ContentView.swift */; };
 		88231E7C2A625A4100BA3B71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88231E7B2A625A4100BA3B71 /* Assets.xcassets */; };
 		88231E802A625A4100BA3B71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88231E7F2A625A4100BA3B71 /* Preview Assets.xcassets */; };
+		88231E872A625A6D00BA3B71 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88231E862A625A6D00BA3B71 /* TagView.swift */; };
+		88231E892A625ACC00BA3B71 /* Taggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88231E882A625ACC00BA3B71 /* Taggable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		88231E722A625A3E00BA3B71 /* TagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88231E752A625A3E00BA3B71 /* TagViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewApp.swift; sourceTree = "<group>"; };
-		88231E772A625A3E00BA3B71 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		88231E792A625A3E00BA3B71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88231E7B2A625A4100BA3B71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88231E7D2A625A4100BA3B71 /* TagView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TagView.entitlements; sourceTree = "<group>"; };
 		88231E7F2A625A4100BA3B71 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88231E862A625A6D00BA3B71 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		88231E882A625ACC00BA3B71 /* Taggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taggable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				88231E752A625A3E00BA3B71 /* TagViewApp.swift */,
-				88231E772A625A3E00BA3B71 /* Item.swift */,
 				88231E792A625A3E00BA3B71 /* ContentView.swift */,
+				88231E862A625A6D00BA3B71 /* TagView.swift */,
+				88231E882A625ACC00BA3B71 /* Taggable.swift */,
 				88231E7B2A625A4100BA3B71 /* Assets.xcassets */,
 				88231E7D2A625A4100BA3B71 /* TagView.entitlements */,
 				88231E7E2A625A4100BA3B71 /* Preview Content */,
@@ -142,9 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88231E782A625A3E00BA3B71 /* Item.swift in Sources */,
+				88231E892A625ACC00BA3B71 /* Taggable.swift in Sources */,
 				88231E762A625A3E00BA3B71 /* TagViewApp.swift in Sources */,
 				88231E7A2A625A3E00BA3B71 /* ContentView.swift in Sources */,
+				88231E872A625A6D00BA3B71 /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
