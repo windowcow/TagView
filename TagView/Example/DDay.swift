@@ -7,24 +7,40 @@
 
 import Foundation
 import SwiftUI
+import SwiftDate
 
 struct DDay: Taggable {
     var title: String
-    var layoutValue: Date
+    var date: Date = .now
+    
+    var layoutOrder: Date {
+        get {
+            date
+        }
+    }
+    
+    var formattedDate: String {
+        let dateComponents = date - Date.now
+        return dateComponents.timeInterval.toString {
+            $0.unitsStyle = .abbreviated
+            $0.allowedUnits = [.day, .hour]
+        }
+    }
+    
     
     @ViewBuilder var label: some View {
-        Text(title)
+        Text(formattedDate)
             .padding(.horizontal)
             .padding(.vertical, 5)
             .foregroundStyle(.white)
             .background(.blue, in: .capsule(style: .circular))
-            .layoutValue(key: Self.layoutValueKey, value: layoutValue)
+            .layoutValue(key: Self.layoutValueKey, value: layoutOrder)
 
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(title)
-        hasher.combine(layoutValue)
+        hasher.combine(layoutOrder)
     }
     
     static let layoutValueKey = DDayLayoutValueKey.self
@@ -32,21 +48,15 @@ struct DDay: Taggable {
     struct DDayLayoutValueKey: LayoutValueKey {
         static var defaultValue: Date = .now
     }
-    
-    static func < (lhs: DDay, rhs: DDay) -> Bool {
-        return lhs.layoutValue < rhs.layoutValue
-    }
-
-    static func == (lhs: DDay, rhs: DDay) -> Bool {
-        return lhs.layoutValue == rhs.layoutValue
-    }
 }
 
 extension DDay {
     static let samples: [DDay] = [
-        DDay(title: "Quit Smoking", layoutValue: Date(timeIntervalSinceNow: 1)),
-        DDay(title: "Test", layoutValue: Date(timeIntervalSinceNow: 2)),
-        DDay(title: "Midterm Presentation", layoutValue: Date(timeIntervalSinceNow: 3))
+        DDay(title: "Quit Smoking", date: .now.addingTimeInterval(Double((10000..<100000).randomElement()!))),
+        DDay(title: "Quit Smoking", date: .now.addingTimeInterval(Double((10000..<100000).randomElement()!))),
+        DDay(title: "Quit Smoking", date: .now.addingTimeInterval(Double((10000..<100000).randomElement()!))),
+        DDay(title: "Quit Smoking", date: .now.addingTimeInterval(Double((10000..<100000).randomElement()!))),
+        DDay(title: "Quit Smoking", date: .now.addingTimeInterval(Double((10000..<100000).randomElement()!))),
     ]
 }
 

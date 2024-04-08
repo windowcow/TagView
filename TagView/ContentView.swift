@@ -23,7 +23,7 @@ struct ContentView: View {
                         dday.label
                     }
                 }
-                
+                .animation(.spring, value: containerWidth)
             }
             
             Spacer()
@@ -33,6 +33,7 @@ struct ContentView: View {
                     dday.label
                 }
             }
+            .animation(.bouncy(duration: 0.3) , value: containerWidth)
             .background(.gray)
                 
             .frame(maxWidth: containerWidth) // not
