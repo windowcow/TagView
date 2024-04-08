@@ -11,6 +11,11 @@
 		88A27D402BC3A02A00E5F831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D3F2BC3A02A00E5F831 /* ContentView.swift */; };
 		88A27D422BC3A02B00E5F831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A27D412BC3A02B00E5F831 /* Assets.xcassets */; };
 		88A27D452BC3A02B00E5F831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A27D442BC3A02B00E5F831 /* Preview Assets.xcassets */; };
+		88A27D4C2BC3A2B400E5F831 /* TagLableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D4B2BC3A2B400E5F831 /* TagLableView.swift */; };
+		88A27D4E2BC3A35200E5F831 /* TagLableResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D4D2BC3A35200E5F831 /* TagLableResults.swift */; };
+		88A27D522BC3A63000E5F831 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D512BC3A63000E5F831 /* TagLayout.swift */; };
+		88A27D542BC3D81900E5F831 /* Taggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D532BC3D81900E5F831 /* Taggable.swift */; };
+		88A27D572BC3D83C00E5F831 /* DDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D562BC3D83C00E5F831 /* DDay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		88A27D3F2BC3A02A00E5F831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88A27D412BC3A02B00E5F831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88A27D442BC3A02B00E5F831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88A27D4B2BC3A2B400E5F831 /* TagLableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLableView.swift; sourceTree = "<group>"; };
+		88A27D4D2BC3A35200E5F831 /* TagLableResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLableResults.swift; sourceTree = "<group>"; };
+		88A27D512BC3A63000E5F831 /* TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayout.swift; sourceTree = "<group>"; };
+		88A27D532BC3D81900E5F831 /* Taggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taggable.swift; sourceTree = "<group>"; };
+		88A27D562BC3D83C00E5F831 /* DDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,10 @@
 			children = (
 				88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */,
 				88A27D3F2BC3A02A00E5F831 /* ContentView.swift */,
+				88A27D4D2BC3A35200E5F831 /* TagLableResults.swift */,
+				88A27D4B2BC3A2B400E5F831 /* TagLableView.swift */,
+				88A27D552BC3D82600E5F831 /* ExampleDataType */,
+				88A27D582BC3DE5800E5F831 /* Layout */,
 				88A27D412BC3A02B00E5F831 /* Assets.xcassets */,
 				88A27D432BC3A02B00E5F831 /* Preview Content */,
 			);
@@ -65,6 +79,23 @@
 				88A27D442BC3A02B00E5F831 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88A27D552BC3D82600E5F831 /* ExampleDataType */ = {
+			isa = PBXGroup;
+			children = (
+				88A27D532BC3D81900E5F831 /* Taggable.swift */,
+				88A27D562BC3D83C00E5F831 /* DDay.swift */,
+			);
+			path = ExampleDataType;
+			sourceTree = "<group>";
+		};
+		88A27D582BC3DE5800E5F831 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				88A27D512BC3A63000E5F831 /* TagLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A27D4C2BC3A2B400E5F831 /* TagLableView.swift in Sources */,
 				88A27D402BC3A02A00E5F831 /* ContentView.swift in Sources */,
+				88A27D542BC3D81900E5F831 /* Taggable.swift in Sources */,
 				88A27D3E2BC3A02A00E5F831 /* TagViewApp.swift in Sources */,
+				88A27D522BC3A63000E5F831 /* TagLayout.swift in Sources */,
+				88A27D4E2BC3A35200E5F831 /* TagLableResults.swift in Sources */,
+				88A27D572BC3D83C00E5F831 /* DDay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
