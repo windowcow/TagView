@@ -12,6 +12,16 @@ struct DDay: Taggable {
     var title: String
     var layoutValue: Date
     
+    @ViewBuilder var label: some View {
+        Text(title)
+            .padding(.horizontal)
+            .padding(.vertical, 5)
+            .foregroundStyle(.white)
+            .background(.blue, in: .capsule(style: .circular))
+            .layoutValue(key: Self.layoutValueKey, value: layoutValue)
+
+    }
+    
     func hash(into hasher: inout Hasher) {
         hasher.combine(title)
         hasher.combine(layoutValue)

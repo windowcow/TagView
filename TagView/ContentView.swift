@@ -19,8 +19,8 @@ struct ContentView: View {
 
             ScrollView(.horizontal) {
                 TagLayout(taggableDataType: DDay.self) {
-                    TagLableResults(taggable: DDay.samples) { tagName in
-                        TagLableView(tag: tagName)
+                    TagLableResults(taggable: DDay.samples) { dday in
+                        dday.label
                     }
                 }
                 
@@ -29,8 +29,8 @@ struct ContentView: View {
             Spacer()
             
             TagLayout(taggableDataType: DDay.self) {
-                TagLableResults(taggable: DDay.samples) { tagName in
-                    TagLableView(tag: tagName)
+                TagLableResults(taggable: DDay.samples) { dday in
+                    dday.label
                 }
             }
             .background(.gray)

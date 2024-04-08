@@ -62,8 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */,
+				88A27D532BC3D81900E5F831 /* Taggable.swift */,
 				88A27D3F2BC3A02A00E5F831 /* ContentView.swift */,
 				88A27D4D2BC3A35200E5F831 /* TagLableResults.swift */,
+				88A27D5D2BC3FF2300E5F831 /* Example */,
 				88A27D4B2BC3A2B400E5F831 /* TagLableView.swift */,
 				88A27D552BC3D82600E5F831 /* ExampleDataType */,
 				88A27D582BC3DE5800E5F831 /* Layout */,
@@ -84,8 +86,6 @@
 		88A27D552BC3D82600E5F831 /* ExampleDataType */ = {
 			isa = PBXGroup;
 			children = (
-				88A27D532BC3D81900E5F831 /* Taggable.swift */,
-				88A27D562BC3D83C00E5F831 /* DDay.swift */,
 			);
 			path = ExampleDataType;
 			sourceTree = "<group>";
@@ -96,6 +96,14 @@
 				88A27D512BC3A63000E5F831 /* TagLayout.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		88A27D5D2BC3FF2300E5F831 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				88A27D562BC3D83C00E5F831 /* DDay.swift */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
