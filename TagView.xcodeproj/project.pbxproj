@@ -15,7 +15,6 @@
 		88A27D522BC3A63000E5F831 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D512BC3A63000E5F831 /* TagLayout.swift */; };
 		88A27D542BC3D81900E5F831 /* Taggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D532BC3D81900E5F831 /* Taggable.swift */; };
 		88A27D572BC3D83C00E5F831 /* DDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D562BC3D83C00E5F831 /* DDay.swift */; };
-		88A27D5F2BC4023800E5F831 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D5E2BC4023800E5F831 /* Date+Extensions.swift */; };
 		88A27D622BC4037100E5F831 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 88A27D612BC4037100E5F831 /* SwiftDate */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +28,6 @@
 		88A27D512BC3A63000E5F831 /* TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayout.swift; sourceTree = "<group>"; };
 		88A27D532BC3D81900E5F831 /* Taggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taggable.swift; sourceTree = "<group>"; };
 		88A27D562BC3D83C00E5F831 /* DDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDay.swift; sourceTree = "<group>"; };
-		88A27D5E2BC4023800E5F831 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +62,11 @@
 			isa = PBXGroup;
 			children = (
 				88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */,
-				88A27D532BC3D81900E5F831 /* Taggable.swift */,
 				88A27D3F2BC3A02A00E5F831 /* ContentView.swift */,
 				88A27D4D2BC3A35200E5F831 /* TagLableResults.swift */,
+				88A27D512BC3A63000E5F831 /* TagLayout.swift */,
+				88A27D532BC3D81900E5F831 /* Taggable.swift */,
 				88A27D5D2BC3FF2300E5F831 /* Example */,
-				88A27D552BC3D82600E5F831 /* ExampleDataType */,
-				88A27D582BC3DE5800E5F831 /* Layout */,
 				88A27D412BC3A02B00E5F831 /* Assets.xcassets */,
 				88A27D432BC3A02B00E5F831 /* Preview Content */,
 			);
@@ -84,26 +81,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		88A27D552BC3D82600E5F831 /* ExampleDataType */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ExampleDataType;
-			sourceTree = "<group>";
-		};
-		88A27D582BC3DE5800E5F831 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				88A27D512BC3A63000E5F831 /* TagLayout.swift */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
 		88A27D5D2BC3FF2300E5F831 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				88A27D562BC3D83C00E5F831 /* DDay.swift */,
-				88A27D5E2BC4023800E5F831 /* Date+Extensions.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -186,7 +167,6 @@
 			files = (
 				88A27D402BC3A02A00E5F831 /* ContentView.swift in Sources */,
 				88A27D542BC3D81900E5F831 /* Taggable.swift in Sources */,
-				88A27D5F2BC4023800E5F831 /* Date+Extensions.swift in Sources */,
 				88A27D3E2BC3A02A00E5F831 /* TagViewApp.swift in Sources */,
 				88A27D522BC3A63000E5F831 /* TagLayout.swift in Sources */,
 				88A27D4E2BC3A35200E5F831 /* TagLableResults.swift in Sources */,
@@ -249,7 +229,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -306,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

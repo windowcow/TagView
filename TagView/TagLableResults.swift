@@ -8,11 +8,20 @@
 import Foundation
 import SwiftUI
 
-struct TagLableResults<Content: View, TaggableType: Taggable>: View {
-    var taggable: [TaggableType]
-    @ViewBuilder var content: (TaggableType) -> Content
-
+struct TagLableResults<TaggableType: Taggable, Content: View>: View {
+    var taggables: [TaggableType]
+    var content: (TaggableType) -> Content // No need of ViewBuilder (It has already been set as protocol requirement)
+    
+    init(taggables: [TaggableType], @ViewBuilder content: @escaping (TaggableType) -> Content) {
+        // ViewBuilder here is for result building the closure which has multiple TaggableType.lable
+        // so the viewbuilder for TaggableType.lable is needed when TaggableType.lable requires @ViewBuilder
+        self.taggables = taggables
+        self.content = content
+    }
+    
     var body: some View {
-        ForEach(taggable, id: \.self, content: content)
+        ForEach(taggables, id: \.self) { taggable in
+            content(taggable)
+        }
     }
 }
