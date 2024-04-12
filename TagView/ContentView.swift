@@ -9,42 +9,66 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var containerWidth: CGFloat = 200.0
+    @State private var tags: [SampleData] = SampleData.samples
+    
+    @State private var containerWidth: CGFloat = 300
+    @State private var horizontalSpacing: CGFloat = 10.0
+    @State private var verticalSpacing: CGFloat = 10.0
+    @State private var isInsideScrollView = false
     
     var body: some View {
-        
-        VStack(spacing: 0) {
-            Spacer()
-
-            ScrollView(.horizontal) {
-                TagLayout(taggableDataType: DDay.self) {
-                    TagLableResults(taggables: DDay.samples) { dday in
-                        dday.label
+        ZStack {
+            Color.cyan.opacity(0.2)
+                .ignoresSafeArea()
+            
+            VStack(alignment: .center) {
+                Spacer(minLength: 1)
+                if isInsideScrollView {
+                    ScrollView(.horizontal) {
+                        TagContainer(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing, tags: tags, priority: \.value) { tag in
+                            tag.label
+                        }
+                        .animation(.spring.speed(2), value: containerWidth)
+                        .background(.gray)
+                        .frame(maxWidth: containerWidth)
+                    }
+                    .scrollIndicators(.hidden)
+                } else {
+                    TagContainer(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing, tags: tags, priority: \.value) { tag in
+                        tag.label
+                    }
+                    .animation(.spring.speed(2), value: containerWidth)
+                    .background(.gray)
+                    .frame(maxWidth: containerWidth)
+                }
+                
+                GroupBox {
+                    Section("container frame max width: \(String(format: "%.f.2", containerWidth))") {
+                        Slider(value: $containerWidth, in: 10.0...800) {
+                            Text("ScrollViewHeight")
+                        }
+                    }
+                    .monospaced()
+                    
+                    Section("spacing") {
+                        
+                        Stepper("horizontal: \(String(format: "%.f.2", horizontalSpacing))", value: $horizontalSpacing,
+                                in: 0.0 ... 50.0,
+                                step: 1.0)
+                        
+                        Stepper("vertical: \(String(format: "%.f.2", verticalSpacing))", value: $verticalSpacing,
+                                in: 0.0 ... 50.0,
+                                step: 1.0)
+                        
                     }
                 }
-                .animation(.spring, value: containerWidth)
-                .padding()
-            }
-            .background(.cyan)
-            
-            Spacer()
-            
-            TagLayout(taggableDataType: DDay.self) {
-                TagLableResults(taggables: DDay.samples) { dday in
-                    dday.label
-                }
-            }
-            .animation(.bouncy(duration: 0.3) , value: containerWidth)
-            .padding()
-            .background(.cyan)
+                .compositingGroup()
+                .fixedSize()
                 
-            .frame(maxWidth: containerWidth) // not
+                
+            }
             
-            Spacer()
-            Slider(value: $containerWidth, in: 0...500)
         }
-        .background(.cyan.opacity(0.3))
-        
     }
 }
 
