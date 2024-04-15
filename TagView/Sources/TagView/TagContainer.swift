@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TagContainer<T: Hashable, ID: Comparable, Content: View>: View {
+public struct TagContainer<T: Hashable, ID: Comparable, Content: View>: View {
     var horizontalSpacing: CGFloat
     var verticalSpacing: CGFloat
     
@@ -16,8 +16,7 @@ struct TagContainer<T: Hashable, ID: Comparable, Content: View>: View {
     var singleTagLabel: (T) -> Content
     
     
-    // Tags must be already sorted
-    init(horizontalSpacing: CGFloat = 10.0, verticalSpacing: CGFloat = 10.0, tags: [T], priority: KeyPath<T, ID>, reverse: Bool = false, @ViewBuilder singleTagLabel: @escaping (T) -> Content) {
+    public init(horizontalSpacing: CGFloat = 10.0, verticalSpacing: CGFloat = 10.0, tags: [T], priority: KeyPath<T, ID>, reverse: Bool = false, @ViewBuilder singleTagLabel: @escaping (T) -> Content) {
         self.horizontalSpacing = horizontalSpacing
         self.verticalSpacing = verticalSpacing
         
@@ -34,7 +33,7 @@ struct TagContainer<T: Hashable, ID: Comparable, Content: View>: View {
     }
     
       
-    var body: some View {
+   public var body: some View {
         TagLayout(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing) {
             ForEach(tags, id: \.self) { tag in
                 singleTagLabel(tag)
@@ -42,8 +41,4 @@ struct TagContainer<T: Hashable, ID: Comparable, Content: View>: View {
         }
         
     }
-}
-
-#Preview {
-    ContentView()
 }

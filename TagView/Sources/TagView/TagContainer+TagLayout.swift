@@ -17,7 +17,7 @@ extension TagContainer {
         var horizontalSpacing: CGFloat = 10.0
         var verticalSpacing: CGFloat = 10.0
         
-        func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
+        public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
             switch proposal.width {
             case .none:
                 calculateContainerSizeForNilProposedWidth(subviews: subviews)
@@ -27,7 +27,7 @@ extension TagContainer {
         }
         
         
-        func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
+        public func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
             guard !subviews.isEmpty else { return }
             
             switch proposal.width {
@@ -129,7 +129,7 @@ extension TagContainer {
             var isRowStarting = true
             var nextX: CGFloat = 0
             
-            var minWidth: CGFloat = subviews.map{$0.sizeThatFits(.unspecified).width}.max()!
+            let maxWidth: CGFloat = subviews.map{$0.sizeThatFits(.unspecified).width}.max()!
             
             while calculatedSubviewCount < subviews.count {
                 let subview = subviews[calculatedSubviewCount]
@@ -142,7 +142,7 @@ extension TagContainer {
                 } else {
                     // When current subview can't be fit in bound
                     // Move to the next row
-                    if nextX + subviewSize.width >= max(proposedContainerWidth, minWidth) {
+                    if nextX + subviewSize.width >= max(proposedContainerWidth, maxWidth) {
                         nextX = 0
                         rowCount += 1
                         isRowStarting = true
@@ -155,14 +155,10 @@ extension TagContainer {
             }
             
             return CGSize(
-                width: max(proposedContainerWidth, minWidth),
+                width: max(proposedContainerWidth, maxWidth),
                 height: -verticalSpacing + CGFloat(rowCount) * (subviews.first!.sizeThatFits(.unspecified).height + verticalSpacing)
             )
         }
     }
 
-}
-
-#Preview {
-    ContentView()
 }

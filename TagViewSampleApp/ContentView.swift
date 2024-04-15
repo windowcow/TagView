@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import TagView
 
 struct ContentView: View {
     @State private var tags: [SampleData] = SampleData.samples

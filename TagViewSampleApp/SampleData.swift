@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import SwiftDate
 
 struct SampleData: Hashable {
     var id: String = UUID().uuidString

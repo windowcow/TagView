@@ -3,32 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		880626432BC912EB00653835 /* TagContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880626422BC912EB00653835 /* TagContainer.swift */; };
 		88A27D3E2BC3A02A00E5F831 /* TagViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */; };
 		88A27D402BC3A02A00E5F831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D3F2BC3A02A00E5F831 /* ContentView.swift */; };
 		88A27D422BC3A02B00E5F831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A27D412BC3A02B00E5F831 /* Assets.xcassets */; };
 		88A27D452BC3A02B00E5F831 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A27D442BC3A02B00E5F831 /* Preview Assets.xcassets */; };
-		88A27D4E2BC3A35200E5F831 /* TagLableResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D4D2BC3A35200E5F831 /* TagLableResults.swift */; };
-		88A27D522BC3A63000E5F831 /* TagContainer+TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D512BC3A63000E5F831 /* TagContainer+TagLayout.swift */; };
-		88A27D542BC3D81900E5F831 /* Taggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D532BC3D81900E5F831 /* Taggable.swift */; };
 		88A27D572BC3D83C00E5F831 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D562BC3D83C00E5F831 /* SampleData.swift */; };
+		88A9BC0A2BCCCE07006EB23B /* TagView in Frameworks */ = {isa = PBXBuildFile; productRef = 88A9BC092BCCCE07006EB23B /* TagView */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8806267E2BC96E9D00653835 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		880626422BC912EB00653835 /* TagContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagContainer.swift; sourceTree = "<group>"; };
-		88A27D3A2BC3A02A00E5F831 /* TagView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88A27D3A2BC3A02A00E5F831 /* TagViewSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagViewSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewApp.swift; sourceTree = "<group>"; };
 		88A27D3F2BC3A02A00E5F831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88A27D412BC3A02B00E5F831 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88A27D442BC3A02B00E5F831 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		88A27D4D2BC3A35200E5F831 /* TagLableResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLableResults.swift; sourceTree = "<group>"; };
-		88A27D512BC3A63000E5F831 /* TagContainer+TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TagContainer+TagLayout.swift"; sourceTree = "<group>"; };
-		88A27D532BC3D81900E5F831 /* Taggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taggable.swift; sourceTree = "<group>"; };
 		88A27D562BC3D83C00E5F831 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		88A9BC072BCCCCAA006EB23B /* TagView */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TagView; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,25 +43,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A9BC0A2BCCCE07006EB23B /* TagView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8806265E2BC92BB000653835 /* Trash */ = {
-			isa = PBXGroup;
-			children = (
-				88A27D4D2BC3A35200E5F831 /* TagLableResults.swift */,
-				88A27D532BC3D81900E5F831 /* Taggable.swift */,
-			);
-			path = Trash;
-			sourceTree = "<group>";
-		};
 		88A27D312BC3A02900E5F831 = {
 			isa = PBXGroup;
 			children = (
-				88A27D3C2BC3A02A00E5F831 /* TagView */,
+				88A27D3C2BC3A02A00E5F831 /* TagViewSampleApp */,
+				88A9BC072BCCCCAA006EB23B /* TagView */,
 				88A27D3B2BC3A02A00E5F831 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,24 +62,21 @@
 		88A27D3B2BC3A02A00E5F831 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				88A27D3A2BC3A02A00E5F831 /* TagView.app */,
+				88A27D3A2BC3A02A00E5F831 /* TagViewSampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		88A27D3C2BC3A02A00E5F831 /* TagView */ = {
+		88A27D3C2BC3A02A00E5F831 /* TagViewSampleApp */ = {
 			isa = PBXGroup;
 			children = (
 				88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */,
 				88A27D3F2BC3A02A00E5F831 /* ContentView.swift */,
-				880626422BC912EB00653835 /* TagContainer.swift */,
-				88A27D512BC3A63000E5F831 /* TagContainer+TagLayout.swift */,
 				88A27D562BC3D83C00E5F831 /* SampleData.swift */,
-				8806265E2BC92BB000653835 /* Trash */,
 				88A27D412BC3A02B00E5F831 /* Assets.xcassets */,
 				88A27D432BC3A02B00E5F831 /* Preview Content */,
 			);
-			path = TagView;
+			path = TagViewSampleApp;
 			sourceTree = "<group>";
 		};
 		88A27D432BC3A02B00E5F831 /* Preview Content */ = {
@@ -93,23 +90,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		88A27D392BC3A02A00E5F831 /* TagView */ = {
+		88A27D392BC3A02A00E5F831 /* TagViewSampleApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 88A27D482BC3A02B00E5F831 /* Build configuration list for PBXNativeTarget "TagView" */;
+			buildConfigurationList = 88A27D482BC3A02B00E5F831 /* Build configuration list for PBXNativeTarget "TagViewSampleApp" */;
 			buildPhases = (
 				88A27D362BC3A02A00E5F831 /* Sources */,
 				88A27D372BC3A02A00E5F831 /* Frameworks */,
 				88A27D382BC3A02A00E5F831 /* Resources */,
+				8806267E2BC96E9D00653835 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TagView;
+			name = TagViewSampleApp;
 			packageProductDependencies = (
+				88A9BC092BCCCE07006EB23B /* TagView */,
 			);
 			productName = TagView;
-			productReference = 88A27D3A2BC3A02A00E5F831 /* TagView.app */;
+			productReference = 88A27D3A2BC3A02A00E5F831 /* TagViewSampleApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,12 +136,13 @@
 			);
 			mainGroup = 88A27D312BC3A02900E5F831;
 			packageReferences = (
+				88A9BC082BCCCE07006EB23B /* XCLocalSwiftPackageReference "TagView" */,
 			);
 			productRefGroup = 88A27D3B2BC3A02A00E5F831 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				88A27D392BC3A02A00E5F831 /* TagView */,
+				88A27D392BC3A02A00E5F831 /* TagViewSampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -165,11 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A27D402BC3A02A00E5F831 /* ContentView.swift in Sources */,
-				88A27D542BC3D81900E5F831 /* Taggable.swift in Sources */,
 				88A27D3E2BC3A02A00E5F831 /* TagViewApp.swift in Sources */,
-				88A27D522BC3A63000E5F831 /* TagContainer+TagLayout.swift in Sources */,
-				880626432BC912EB00653835 /* TagContainer.swift in Sources */,
-				88A27D4E2BC3A35200E5F831 /* TagLableResults.swift in Sources */,
 				88A27D572BC3D83C00E5F831 /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +299,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TagView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TagViewSampleApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 9KPHTM749M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -332,7 +328,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"TagView/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TagViewSampleApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 9KPHTM749M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -366,7 +362,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		88A27D482BC3A02B00E5F831 /* Build configuration list for PBXNativeTarget "TagView" */ = {
+		88A27D482BC3A02B00E5F831 /* Build configuration list for PBXNativeTarget "TagViewSampleApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				88A27D492BC3A02B00E5F831 /* Debug */,
@@ -376,6 +372,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		88A9BC082BCCCE07006EB23B /* XCLocalSwiftPackageReference "TagView" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = TagView;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88A9BC092BCCCE07006EB23B /* TagView */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TagView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88A27D322BC3A02900E5F831 /* Project object */;
 }
