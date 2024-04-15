@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct TagContainer<T: Hashable, ID: Comparable, Content: View>: View {
+public struct TagView<T: Hashable, ID: Comparable, Content: View>: View {
     var horizontalSpacing: CGFloat
     var verticalSpacing: CGFloat
     

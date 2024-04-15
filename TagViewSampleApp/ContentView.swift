@@ -25,7 +25,7 @@ struct ContentView: View {
                 Spacer(minLength: 1)
                 if isInsideScrollView {
                     ScrollView(.horizontal) {
-                        TagContainer(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing, tags: tags, priority: \.value) { tag in
+                        TagView(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing, tags: tags, priority: \.value) { tag in
                             tag.label
                         }
                         .animation(.spring.speed(2), value: containerWidth)
@@ -34,7 +34,7 @@ struct ContentView: View {
                     }
                     .scrollIndicators(.hidden)
                 } else {
-                    TagContainer(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing, tags: tags, priority: \.value) { tag in
+                    TagView(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing, tags: tags, priority: \.value) { tag in
                         tag.label
                     }
                     .animation(.spring.speed(2), value: containerWidth)

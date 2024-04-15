@@ -12,7 +12,7 @@ import SwiftUI
 // thus it is expected to ProposedViewSize is expected as (nil x nil)
 // when TagLayoutMode.presentAll, the ProposedViewSize.width is expected to be not nil.
 // the size only cares about it.
-extension TagContainer {
+extension TagView {
     struct TagLayout: Layout {
         var horizontalSpacing: CGFloat = 10.0
         var verticalSpacing: CGFloat = 10.0
