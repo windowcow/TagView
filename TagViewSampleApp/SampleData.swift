@@ -11,9 +11,16 @@ import SwiftUI
 struct SampleData: Hashable {
     var id: String = UUID().uuidString
     var value: String = (1 ... 15).randomElement()!.randomString
+    var count: String {
+        value.count.description
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(value)
+    }
 }
 
-let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+let letters = "abcdefghijklmnopqrstuvwxyz"
 
 extension Int {
     var randomString: String {

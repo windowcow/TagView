@@ -14,11 +14,22 @@ import SwiftUI
 // the size only cares about it.
 extension TagView {
     struct TagLayout: Layout {
-        var horizontalSpacing: CGFloat = 10.0
-        var verticalSpacing: CGFloat = 10.0
+        var horizontalSpacing: CGFloat
+        var verticalSpacing: CGFloat
+        
+        let sortByPriority: (Subviews.Element, Subviews.Element) -> Bool = { subview1, subview2 in
+            subview1.priority < subview2.priority
+        }
+        
+        init(horizontalSpacing: CGFloat = 10.0, verticalSpacing: CGFloat = 10.0) {
+            self.horizontalSpacing = horizontalSpacing
+            self.verticalSpacing = verticalSpacing
+        }
         
         public func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-            switch proposal.width {
+            guard !subviews.isEmpty else { return .zero }
+            
+            return switch proposal.width {
             case .none:
                 calculateContainerSizeForNilProposedWidth(subviews: subviews)
             default:
@@ -39,6 +50,8 @@ extension TagView {
         }
         
         private func placeSubviewForProposalWithNilWidth(in bounds: CGRect, subviews: Subviews) {
+            let subviews = subviews.sorted(by: sortByPriority)
+            
             var nextPosition = CGPoint()
             
             for subview in subviews {
@@ -56,6 +69,8 @@ extension TagView {
         }
         
         private func placeSubviewForProposalWithNotNilWidth(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews) {
+            let subviews = subviews.sorted(by: sortByPriority)
+
             let origin = bounds.origin
             
             var nextPosition = CGPoint()
@@ -110,6 +125,8 @@ extension TagView {
         private func calculateContainerSizeForNilProposedWidth(subviews: Subviews) -> CGSize {
             guard !subviews.isEmpty else { return CGSize() }
 
+            let subviews = subviews.sorted(by: sortByPriority)
+
             return CGSize(
                     width: subviews.reduce(-horizontalSpacing) {
                         $0 + $1.sizeThatFits(.unspecified).width + horizontalSpacing
@@ -120,6 +137,8 @@ extension TagView {
         
         private func calculateContainerSizeForNotNilProposedWidth(proposedViewSize: ProposedViewSize, subviews: Subviews) -> CGSize {
             guard !subviews.isEmpty else { return CGSize() }
+
+            let subviews = subviews.sorted(by: sortByPriority)
 
             let proposedContainerWidth = proposedViewSize.replacingUnspecifiedDimensions().width
                     
@@ -142,7 +161,7 @@ extension TagView {
                 } else {
                     // When current subview can't be fit in bound
                     // Move to the next row
-                    if nextX + subviewSize.width >= max(proposedContainerWidth, maxWidth) {
+                    if nextX + subviewSize.width > max(proposedContainerWidth, maxWidth) {
                         nextX = 0
                         rowCount += 1
                         isRowStarting = true
