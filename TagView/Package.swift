@@ -7,14 +7,11 @@ let package = Package(
     name: "TagView",
     platforms: [.iOS(.v16), .macOS(.v13), .macCatalyst(.v13)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "TagView",
             targets: ["TagView"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "TagView"),
         .testTarget(

@@ -27,15 +27,17 @@ struct ContentView: View {
                     TagView(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing, tags: tags, priority: sortOrder ?  \.value : \.count) { tag in
                         tag.label
                     }
-                    .background(.gray)
+                    .border(.black, width: 1)
                 }
                 .scrollIndicators(.hidden)
                 
                 TagView(horizontalSpacing: horizontalSpacing, verticalSpacing: verticalSpacing, tags: tags, priority: sortOrder ?  \.value : \.count) { tag in
                     tag.label
                 }
-                .background(.gray)
                 .frame(maxWidth: containerWidth)
+                .border(.black, width: 1)
+                
+                Spacer()
                 
                 TagViewForm(sortOrder: $sortOrder, containerWidth: $containerWidth, horizontalSpacing: $horizontalSpacing, verticalSpacing: $verticalSpacing)
                     .animation(.none, value: sortOrder)

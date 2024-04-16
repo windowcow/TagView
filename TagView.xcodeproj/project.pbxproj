@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		887722E22BCD774600D63619 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887722E12BCD774600D63619 /* Practice.swift */; };
 		88A27D3E2BC3A02A00E5F831 /* TagViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */; };
 		88A27D402BC3A02A00E5F831 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A27D3F2BC3A02A00E5F831 /* ContentView.swift */; };
 		88A27D422BC3A02B00E5F831 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88A27D412BC3A02B00E5F831 /* Assets.xcassets */; };
@@ -30,7 +29,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		887722E12BCD774600D63619 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		88A27D3A2BC3A02A00E5F831 /* TagViewSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TagViewSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewApp.swift; sourceTree = "<group>"; };
 		88A27D3F2BC3A02A00E5F831 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 			children = (
 				88A27D3D2BC3A02A00E5F831 /* TagViewApp.swift */,
 				88A27D3F2BC3A02A00E5F831 /* ContentView.swift */,
-				887722E12BCD774600D63619 /* Practice.swift */,
 				88A27D562BC3D83C00E5F831 /* SampleData.swift */,
 				88A27D412BC3A02B00E5F831 /* Assets.xcassets */,
 				88A27D432BC3A02B00E5F831 /* Preview Content */,
@@ -167,7 +164,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				887722E22BCD774600D63619 /* Practice.swift in Sources */,
 				88A27D402BC3A02A00E5F831 /* ContentView.swift in Sources */,
 				88A27D3E2BC3A02A00E5F831 /* TagViewApp.swift in Sources */,
 				88A27D572BC3D83C00E5F831 /* SampleData.swift in Sources */,
